@@ -4,6 +4,7 @@ Admin::model(SoundWorker\Productso\Models\PrsoCategory::class)->title('Кате�
 {
 	$display = AdminDisplay::tree();
 	$display->value('name');
+
 	return $display;
 
 })->createAndEdit(function ()
