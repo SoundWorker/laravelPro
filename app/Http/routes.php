@@ -60,6 +60,21 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('attaches/{date}/{filename}', function ($date,$filename) {
         return Storage::get('attaches/'.$date.'/'.$filename);
     });
+
+//    Route::get('/attaches/{dateimg}/{filename}/{w}/{h}', function($dateimg , $filename,  $w, $h){
+//        $filepath = storage_path('attaches/' . $dateimg .'/'. $filename);
+//        $cacheimage = Image::cache(function($image) use( $filepath){
+//            return $image->make($filepath)->resize($w, $h);
+//        }, 129600, false);
+//        return Response::make($cacheimage, 200, array('Content-Type' => 'image/jpeg'));
+//    });
+
+    Route::get('attaches/{dateImg}/{filename}/{width}/{height}/{type?}/{anchor?}', 'ImageController@whResize');
+    Route::get('attaches/{dateImg}/{filename}/', 'ImageController@fullImage');
+
+
+
+
 });
 
 /**

@@ -168,7 +168,7 @@ return [
 
 
         App\Providers\HelperServiceProvider::class,
-
+        Intervention\Image\ImageServiceProvider::class,
 
     ],
 
@@ -231,6 +231,7 @@ return [
         'FormItem'      => SleepingOwl\Admin\FormItems\FormItem::class,
 
         'UserHlp'     => App\Helpers\UserHlp::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 
