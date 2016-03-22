@@ -39,6 +39,11 @@
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>
+                <ul>
+                    <li><a href="/login">login</a></li>
+                    <li><a href="/register">register</a></li>
+                    <li><a href="/reset">reset</a></li>
+                </ul>
             </div>
         </div>
     </body>

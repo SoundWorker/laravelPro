@@ -6,7 +6,14 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "laravel/framework": "5.2.*",
+        "cartalyst/sentinel": "2.0.*",
+        "laravelcollective/html": "5.2.*",
+        "sleeping-owl/admin": "dev-fixSentinelfix52",
+        "jeroen-g/laravel-packager" : "dev-master",
+        "kalnoy/nestedset": "^4.0",
+        "angrydeer/attachfiles": "dev-master"
+
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -20,6 +27,9 @@
             "database"
         ],
         "psr-4": {
+            "SoundWorker\\Productso\\": "packages/SoundWorker/Productso/src",
+
+
             "App\\": "app/"
         }
     },
@@ -48,5 +58,11 @@
     },
     "config": {
         "preferred-install": "dist"
-    }
+    },
+    "repositories": [
+        {
+            "url": "https://github.com/soundWorker/admin.git",
+            "type": "git"
+        }
+    ]
 }
