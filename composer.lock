@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a7720fa13bcaf0133588c820bc947313",
-    "content-hash": "0ca521968a0e2b2b48621e582450bbdb",
+    "hash": "9ca069746825aa3ab691b3e6d0ece254",
+    "content-hash": "34441c2ceeb1079bae596d2c274b86c9",
     "packages": [
         {
             "name": "angrydeer/attachfiles",
@@ -272,6 +272,68 @@
                 "preload"
             ],
             "time": "2015-11-09 22:51:51"
+        },
+        {
+            "name": "cocur/slugify",
+            "version": "v2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cocur/slugify.git",
+                "reference": "912bf41f940f9a4e38ff1284b1841eaa71911d7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cocur/slugify/zipball/912bf41f940f9a4e38ff1284b1841eaa71911d7f",
+                "reference": "912bf41f940f9a4e38ff1284b1841eaa71911d7f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "laravel/framework": "~5.1",
+                "latte/latte": "~2.2",
+                "mikey179/vfsstream": "~1.6",
+                "mockery/mockery": "~0.9",
+                "nette/di": "~2.2",
+                "phpunit/phpunit": "~4.8|~5.2",
+                "pimple/pimple": "~1.1",
+                "plumphp/plum": "~0.1",
+                "silex/silex": "~1.3",
+                "symfony/dependency-injection": "~2.4|~3.0",
+                "symfony/http-kernel": "~2.4|~3.0",
+                "twig/twig": "~1.12",
+                "zendframework/zend-modulemanager": "~2.2",
+                "zendframework/zend-servicemanager": "~2.2",
+                "zendframework/zend-view": "~2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cocur\\Slugify\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivo Bathke",
+                    "email": "ivo.bathke@gmail.com"
+                },
+                {
+                    "name": "Florian Eckerstorfer",
+                    "email": "florian@eckerstorfer.co",
+                    "homepage": "https://florian.ec"
+                }
+            ],
+            "description": "Converts a string into a slug.",
+            "keywords": [
+                "slug",
+                "slugify"
+            ],
+            "time": "2016-02-24 21:50:50"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -777,16 +839,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.1.1",
+            "version": "6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "c6851d6e48f63b69357cbfa55bca116448140e0c"
+                "reference": "d094e337976dff9d8e2424e8485872194e768662"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/c6851d6e48f63b69357cbfa55bca116448140e0c",
-                "reference": "c6851d6e48f63b69357cbfa55bca116448140e0c",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d094e337976dff9d8e2424e8485872194e768662",
+                "reference": "d094e337976dff9d8e2424e8485872194e768662",
                 "shasum": ""
             },
             "require": {
@@ -802,7 +864,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.1-dev"
+                    "dev-master": "6.2-dev"
                 }
             },
             "autoload": {
@@ -835,7 +897,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-11-23 00:47:50"
+            "time": "2016-03-21 20:02:09"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1255,17 +1317,58 @@
             "time": "2016-03-13 22:02:05"
         },
         {
+            "name": "jeroen-g/laravel-pages",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soundWorker/laravel-pages.git",
+                "reference": "627e9f5aaa8cde6071c55d1fd47d577bb6ff28e7"
+            },
+            "require": {
+                "cocur/slugify": "^2.0",
+                "illuminate/support": "~5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "migrations"
+                ],
+                "psr-4": {
+                    "JeroenG\\LaravelPages\\": "src/"
+                }
+            },
+            "license": [
+                "EUPL-1.1"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen G",
+                    "email": "jeroeng.jeroeng@gmail.com"
+                }
+            ],
+            "description": "Simple pages package for Laravel 5",
+            "homepage": "https://github.com/Jeroen-G/laravel-pages",
+            "keywords": [
+                "Laravel",
+                "Pages"
+            ],
+            "time": "2016-03-28 13:03:39"
+        },
+        {
             "name": "kalnoy/nestedset",
-            "version": "v4.1.1",
+            "version": "v4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lazychaser/laravel-nestedset.git",
-                "reference": "5524d6c2e5e21f33155e973bab5b0cdd39e41d3f"
+                "reference": "695f6fd8e31ed4b79329d4c121d451e223680b86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lazychaser/laravel-nestedset/zipball/5524d6c2e5e21f33155e973bab5b0cdd39e41d3f",
-                "reference": "5524d6c2e5e21f33155e973bab5b0cdd39e41d3f",
+                "url": "https://api.github.com/repos/lazychaser/laravel-nestedset/zipball/695f6fd8e31ed4b79329d4c121d451e223680b86",
+                "reference": "695f6fd8e31ed4b79329d4c121d451e223680b86",
                 "shasum": ""
             },
             "require": {
@@ -1306,20 +1409,20 @@
                 "nested sets",
                 "nsm"
             ],
-            "time": "2016-03-13 06:45:35"
+            "time": "2016-03-23 17:51:33"
         },
         {
             "name": "laravel/framework",
-            "version": "v5.2.23",
+            "version": "v5.2.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "87c090845f135ca94eba903f1c8462e60e3a6e36"
+                "reference": "b73ac62506c5c2bd49d87fcb1089f7759431e173"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/87c090845f135ca94eba903f1c8462e60e3a6e36",
-                "reference": "87c090845f135ca94eba903f1c8462e60e3a6e36",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/b73ac62506c5c2bd49d87fcb1089f7759431e173",
+                "reference": "b73ac62506c5c2bd49d87fcb1089f7759431e173",
                 "shasum": ""
             },
             "require": {
@@ -1332,7 +1435,7 @@
                 "monolog/monolog": "~1.11",
                 "mtdowling/cron-expression": "~1.0",
                 "nesbot/carbon": "~1.20",
-                "paragonie/random_compat": "~1.1",
+                "paragonie/random_compat": "~1.4",
                 "php": ">=5.5.9",
                 "psy/psysh": "0.7.*",
                 "swiftmailer/swiftmailer": "~5.1",
@@ -1434,7 +1537,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-03-14 14:22:33"
+            "time": "2016-03-25 17:12:52"
         },
         {
             "name": "laravelcollective/html",
@@ -4162,7 +4265,8 @@
     "stability-flags": {
         "sleeping-owl/admin": 20,
         "jeroen-g/laravel-packager": 20,
-        "angrydeer/attachfiles": 20
+        "angrydeer/attachfiles": 20,
+        "jeroen-g/laravel-pages": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

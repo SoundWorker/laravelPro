@@ -170,6 +170,8 @@ return [
         App\Providers\HelperServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
+
+        JeroenG\LaravelPages\LaravelPagesServiceProvider::class
     ],
 
     /*
@@ -232,6 +234,8 @@ return [
 
         'UserHlp'     => App\Helpers\UserHlp::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'LPages'   =>  JeroenG\LaravelPages\Facades\LaravelPages::class,
+
 
     ],
 

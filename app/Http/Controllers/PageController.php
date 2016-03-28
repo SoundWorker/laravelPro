@@ -12,8 +12,8 @@ class PageController extends Controller
 {
     public function show($slug)
     {
-        $pageRes = Page::where('slug', '=', $slug, 'and', 'status', '=', 'published')->firstOrFail();
-
-        return view('page', ['page' => $pageRes] );
+//        $pageRes = Page::where('slug', '=', $slug, 'and', 'status', '=', 'published')->firstOrFail();
+//
+//        return view('page', ['page' => $pageRes] );
     }
 }

@@ -14,7 +14,8 @@
         "kalnoy/nestedset": "^4.0",
         "angrydeer/attachfiles": "dev-master",
         "intervention/image": "^2.3",
-        "intervention/imagecache": "^2.3"
+        "intervention/imagecache": "^2.3",
+        "jeroen-g/laravel-pages": "dev-master"
 
     },
     "require-dev": {
@@ -64,6 +65,10 @@
     "repositories": [
         {
             "url": "https://github.com/soundWorker/admin.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/soundWorker/laravel-pages.git",
             "type": "git"
         }
     ]

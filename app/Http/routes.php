@@ -72,7 +72,24 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('attaches/{dateImg}/{filename}/{width}/{height}/{type?}/{anchor?}', 'ImageController@whResize');
     Route::get('attaches/{dateImg}/{filename}/', 'ImageController@fullImage');
 
+    Route::get('{uri?}', function($uri)
+    {
 
+        if(LPages::pageExists($uri))
+        {
+            /**
+             * @var $page JeroenG\LaravelPages\Page
+             */
+            $page = LPages::getPage($uri);
+            $page = $page->getAttributes();
+            
+            return View::make('page', ['page' => $page] );
+        }
+        else
+        {
+            App::abort(404, 'Page Not Found!!');
+        }
+    });
 
 
 });
